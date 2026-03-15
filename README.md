@@ -41,6 +41,20 @@ npm run build
 
 **ErrorBoundary at feature boundaries** — crashes in Dashboard don't affect Orders and vice versa. Global boundary in `App.tsx` as last resort.
 
+## Branch workflow
+
+```
+feature/fix branch → PR to main → CI runs automatically → merge if all checks pass → deploy to GitHub Pages
+```
+
+CI pipeline on every PR:
+
+1. `npm run lint` — ESLint check
+2. `npm run test` — Vitest unit and integration tests
+3. `npm run build` — TypeScript compile + Vite build
+
+Merging to `main` is blocked if any step fails.
+
 ## Tests
 
 ```
