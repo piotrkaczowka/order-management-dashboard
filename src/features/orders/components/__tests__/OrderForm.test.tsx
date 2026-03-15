@@ -1,7 +1,7 @@
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
-import { AVAILABLE_COUNTRIES } from '../../../../lib/types/order'
+import { AVAILABLE_COUNTRIES } from '../../../../lib/types/country'
 import { renderWithProviders } from '../../../../test/renderWithProviders'
 import OrderForm from '../OrderForm'
 

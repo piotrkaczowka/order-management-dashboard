@@ -1,8 +1,6 @@
 import { z } from 'zod'
 
-export const AVAILABLE_COUNTRIES = ['Poland', 'Netherlands', 'Germany', 'France'] as const
-
-export type Country = (typeof AVAILABLE_COUNTRIES)[number]
+import { AVAILABLE_COUNTRIES } from './country'
 
 export const OrderSchema = z.object({
   id: z.string(),

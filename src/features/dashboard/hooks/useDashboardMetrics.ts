@@ -1,3 +1,4 @@
+import { formatCurrency } from '../../../lib/utils/formatCurrency'
 import { useAppSelector } from '../../../store'
 import {
   selectTotalOrders,
@@ -12,7 +13,7 @@ export const useDashboardMetrics = () => {
 
   return {
     totalOrders,
-    totalPrice: `$${totalPrice.toLocaleString()}`,
+    totalPrice: formatCurrency(totalPrice),
     uniqueCountries,
   }
 }
