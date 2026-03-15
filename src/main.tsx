@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 
 import { CssBaseline, ThemeProvider } from '@mui/material'
 
@@ -10,14 +10,16 @@ import './index.css'
 import { theme } from './lib/theme.ts'
 import { store } from './store.ts'
 
+// TODO: replace HashRouter with BrowserRouter when deploying to a real server
+// (e.g. Vercel, Nginx) that supports SPA routing
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <BrowserRouter>
+        <HashRouter>
           <App />
-        </BrowserRouter>
+        </HashRouter>
       </ThemeProvider>
     </Provider>
   </StrictMode>

@@ -1,6 +1,8 @@
 # Order Management Dashboard
 
-A simple logistics dashboard for tracking and managing orders.
+A frontend demo app built to demonstrate my approach to state management, architecture, and code organization in a React + TypeScript project.
+
+**[Live demo](https://piotrkaczowka.github.io/order-management-dashboard/)**
 
 ## Stack
 
@@ -49,5 +51,7 @@ ordersSlice.test.ts      # CRUD mutations, dashboard selector sync
 ## Future improvements
 
 - Auth0 authentication + protected routes
-- Sentry error monitoring (`componentDidCount` already prepared)
+- Sentry error monitoring (`componentDidCatch` already prepared)
 - Pagination / sorting on the orders table
+
+> Deployed on GitHub Pages using HashRouter. For production deployment on a real server replace with BrowserRouter for clean URLs.
