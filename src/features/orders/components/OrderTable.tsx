@@ -16,6 +16,7 @@ import {
 } from '@mui/material'
 
 import type { Order } from '../../../lib/types/order'
+import { formatCurrency } from '../../../lib/utils/formatCurrency'
 
 interface Props {
   orders: Order[]
@@ -67,7 +68,7 @@ const OrderTable = ({ orders, isLoading, onEdit, onDelete }: Props) => {
               <TableCell>{order.country}</TableCell>
               <TableCell>{order.shippingDate}</TableCell>
               <TableCell>
-                <Typography fontWeight={600}>${order.price.toLocaleString()}</Typography>
+                <Typography fontWeight={600}>{formatCurrency(order.price)}</Typography>
               </TableCell>
               <TableCell align="right">
                 <Tooltip title="Edit order">

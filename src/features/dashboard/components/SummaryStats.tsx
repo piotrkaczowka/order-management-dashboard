@@ -1,4 +1,4 @@
-import { AttachMoney, Inventory, Public } from '@mui/icons-material'
+import { EuroSymbol, Inventory, Public } from '@mui/icons-material'
 import { Box, Grid, Typography } from '@mui/material'
 
 import { useDashboardMetrics } from '../hooks/useDashboardMetrics'
@@ -26,7 +26,7 @@ const SummaryStats = () => {
           <MetricsCard
             title="Total Revenue"
             value={totalPrice}
-            Icon={AttachMoney}
+            Icon={EuroSymbol}
             color="secondary.main"
           />
         </Grid>
